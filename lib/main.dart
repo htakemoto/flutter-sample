@@ -4,6 +4,7 @@ import 'pages/news/news.dart';
 import 'pages/events/events.dart';
 import 'pages/favorites/favorites.dart';
 import 'pages/contacts/contact_list.dart';
+import 'pages/form/form.dart';
 import 'pages/settings/settings.dart';
 
 void main() => runApp(MyApp());
@@ -21,9 +22,10 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
       routes: <String, WidgetBuilder> {
         '/home': (BuildContext context) => HomePage(),
-        '/events': (BuildContext context) => EventsPage(),
         '/favorites': (BuildContext context) => FavoritesPage(),
+        '/events': (BuildContext context) => EventsPage(),
         '/contacts': (BuildContext context) => ContactsPage(),
+        '/form': (BuildContext context) => FormPage(),
         '/settings': (BuildContext context) => SettingsPage()
       },
     );
@@ -64,14 +66,6 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.event_note),
-            title: Text('Events'),
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.pushReplacementNamed(context, '/events');
-            },
-          ),
-          ListTile(
             leading: Icon(Icons.favorite),
             title: Text('Favorites'),
             onTap: () {
@@ -80,11 +74,27 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: Icon(Icons.event_note),
+            title: Text('Events'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushReplacementNamed(context, '/events');
+            },
+          ),
+          ListTile(
             leading: Icon(Icons.contacts),
             title: Text('Contacts'),
             onTap: () {
               Navigator.pop(context);
               Navigator.pushReplacementNamed(context, '/contacts');
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.comment),
+            title: Text('Form'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushReplacementNamed(context, '/form');
             },
           ),
           Divider(),
