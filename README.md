@@ -13,6 +13,7 @@ Flutter sample project.
 ## Run
 
 ```bash
+open -a Simulator
 flutter pub get
 flutter run
 ```

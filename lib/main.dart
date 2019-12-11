@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
       routes: <String, WidgetBuilder> {
         '/home': (BuildContext context) => HomePage(),
@@ -52,7 +53,7 @@ class AppDrawer extends StatelessWidget {
             ),
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/account-bg.jpg'),
+                image: AssetImage('assets/account-bg.jpg'),
                 fit: BoxFit.fill,
               )
             ),
@@ -61,7 +62,6 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.home),
             title: Text('Home'),
             onTap: () {
-              Navigator.pop(context);
               Navigator.pushReplacementNamed(context, '/home');
             },
           ),
@@ -69,7 +69,6 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.favorite),
             title: Text('Favorites'),
             onTap: () {
-              Navigator.pop(context);
               Navigator.pushReplacementNamed(context, '/favorites');
             },
           ),
@@ -77,7 +76,6 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.event_note),
             title: Text('Events'),
             onTap: () {
-              Navigator.pop(context);
               Navigator.pushReplacementNamed(context, '/events');
             },
           ),
@@ -85,7 +83,6 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.contacts),
             title: Text('Contacts'),
             onTap: () {
-              Navigator.pop(context);
               Navigator.pushReplacementNamed(context, '/contacts');
             },
           ),
@@ -93,7 +90,6 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.comment),
             title: Text('Form'),
             onTap: () {
-              Navigator.pop(context);
               Navigator.pushReplacementNamed(context, '/form');
             },
           ),
@@ -102,7 +98,6 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.settings),
             title: Text('Settings'),
             onTap: () {
-              Navigator.pop(context);
               Navigator.pushReplacementNamed(context, '/settings');
             },
           ),
